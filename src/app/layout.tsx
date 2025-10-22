@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "Web de mi tío",
+  title: "Gaudencio Rodríguez",
   description: "Artículos, libros, cursos y más",
 };
 
