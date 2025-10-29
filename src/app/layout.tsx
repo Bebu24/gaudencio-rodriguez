@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Gaudencio Rodríguez",
-  description: "Artículos, libros, cursos y más",
+  description: "Para leer, libros, cursos y más",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
