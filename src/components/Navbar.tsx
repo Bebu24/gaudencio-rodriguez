@@ -14,23 +14,20 @@ export default function Navbar() {
           Gaudencio Rodríguez
         </Link>
         <div className="flex gap-4 text-sm text-[#5C3D2E]">
-          <Link href="/articulos" className="hover:text-[#A56C43] transition-colors">
-            Para leer
+          <Link href="/sobre-mi" className="hover:text-[#A56C43] transition-colors">
+            Un poco sobre mí
           </Link>
           <Link href="/libros" className="hover:text-[#A56C43] transition-colors">
             Libros
           </Link>
           <Link href="/cursos" className="hover:text-[#A56C43] transition-colors">
-            Cursos
-          </Link>
-          <Link href="/contrataciones" className="hover:text-[#A56C43] transition-colors">
-            Contrataciones
+            Cursos y Talleres
           </Link>
           <Link href="/contenido" className="hover:text-[#A56C43] transition-colors">
             Contenido
           </Link>
-          <Link href="/sobre-mi" className="hover:text-[#A56C43] transition-colors">
-            Sobre mí
+          <Link href="/contrataciones" className="hover:text-[#A56C43] transition-colors">
+            Contrataciones
           </Link>
         </div>
       </div>
