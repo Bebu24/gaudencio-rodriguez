@@ -1,84 +1,59 @@
 // app/page.tsx
+import Image from "next/image";
 import Link from "next/link";
+
+
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#F9F9F9] text-[#4F6572]">
-      {/* Hero principal */}
-      <section className="bg-[#6D8B91] text-white text-center py-28 px-6">
-        <h1 className="text-5xl font-extrabold mb-4">
-          “Abrázame, no me pegues”
-        </h1>
-        <p className="text-lg max-w-2xl mx-auto">
-          Coadyuvar en el cuidado y buen trato de los niños y adolescentes para su pleno desarrollo.
-        </p>
-        <div className="mt-10 flex justify-center gap-4">
-          <Link
-            href="/cursos"
-            className="px-6 py-3 rounded-full bg-[#4F6572] text-white font-semibold hover:bg-[#F9F9F9] hover:text-[#4F6572] transition"
-          >
-            Ver cursos
-          </Link>
-          <Link
-            href="/libros"
-            className="px-6 py-3 rounded-full border-2 border-white font-semibold hover:bg-white hover:text-[#6D8B91] transition"
-          >
-            Ver libros
-          </Link>
+    <div className="min-h-screen flex flex-col">
+      {/* Hero Section */}
+      <section className="relative flex flex-col md:flex-row h-screen pt-20">
+        {/* Imagen de fondo */}
+        <div className="absolute inset-0">
+          {/* Capa azul */}
+          <div className="absolute inset-0 bg-[#6D8B91]/60 mix-blend-multiply" />
+          {/* Capa blanca encima */}
+          <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]" />
         </div>
-      </section>
 
-      {/* Presentación */}
-      <section className="max-w-5xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold mb-4">Gaudencio Rodríguez</h2>
-        <p className="text-lg text-[#6D8B91] leading-relaxed max-w-3xl mx-auto">
-          Psicólogo, escritor y formador comprometido con el bienestar infantil. 
-          Su enfoque combina ciencia, empatía y años de colaboración con instituciones como UNICEF 
-          para ofrecer herramientas que transforman la educación y la crianza.
-        </p>
-      </section>
+        {/* Texto principal */}
+        <div className="relative z-10 flex flex-col justify-center items-start text-[#4F6572] md:w-1/2 p-10 md:p-16">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+            Abrázame, no me pegues
+          </h1>
+          <p className="text-lg md:text-xl mb-8">
+            Coadyuvamos en el cuidado y buen trato de los niños y adolescentes
+            para su pleno desarrollo.
+          </p>
 
-      {/* Sección de contenido destacado */}
-      <section className="bg-[#4F6572] text-white py-16">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 text-center">
-          <div className="bg-[#6D8B91] rounded-2xl p-10 shadow-lg">
-            <h3 className="text-2xl font-bold mb-4">Cursos y talleres</h3>
-            <p className="mb-6">
-              Aprende sobre educación emocional, límites y crianza con calidez y ciencia.
-            </p>
+          <div className="flex flex-wrap gap-4">
             <Link
               href="/cursos"
-              className="inline-block px-6 py-3 rounded-full bg-[#4F6572] text-white font-semibold hover:bg-white hover:text-[#4F6572] transition"
+              className="px-6 py-3 rounded-full bg-[#7E6B39] text-white font-semibold shadow-md hover:bg-[#6D8B91] transition"
             >
-              Ver más
+              Ver cursos
             </Link>
-          </div>
-
-          <div className="bg-[#6D8B91] rounded-2xl p-10 shadow-lg">
-            <h3 className="text-2xl font-bold mb-4">Libros</h3>
-            <p className="mb-6">
-              Obras que inspiran una crianza respetuosa y reflexiva, con base en la psicología infantil.
-            </p>
             <Link
               href="/libros"
-              className="inline-block px-6 py-3 rounded-full bg-[#4F6572] text-white font-semibold hover:bg-white hover:text-[#4F6572] transition"
+              className="px-6 py-3 rounded-full border-2 border-[#7E6B39] text-[#7E6B39] font-semibold hover:bg-[#6D8B91]/10 transition"
             >
-              Ver más
+              Ver libros
             </Link>
           </div>
         </div>
-      </section>
 
-      {/* Cierre */}
-      <section className="text-center py-20 bg-[#6D8B91] text-white">
-        <h3 className="text-2xl font-bold mb-4">Cambia el modo de educar</h3>
-        <p className="mb-8">Explora, aprende y transforma el mundo de tus hijos desde el respeto.</p>
-        <Link
-          href="/cursos"
-          className="px-6 py-3 rounded-full bg-[#4F6572] text-white font-semibold hover:bg-white hover:text-[#4F6572] transition"
-        >
-          Comenzar ahora
-        </Link>
+        {/* Imagen lateral derecha */}
+        <div className="relative md:w-1/2 h-64 md:h-auto md:p-8">
+          <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/foto-libros.jpg"
+              alt="Gaudencio Rodríguez en conferencia"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
       </section>
     </div>
   );
